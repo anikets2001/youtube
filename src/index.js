@@ -6,6 +6,10 @@ import connectDB from './db/index.js';
 
 const PORT = process.env.PORT || 5000;
 
+app.get('/', (req, res)=> {
+    res.send("Home Page")
+})
+
 connectDB()
 .then(()=> {
     app.listen(PORT, () => {
